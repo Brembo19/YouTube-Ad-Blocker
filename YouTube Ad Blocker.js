@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         YouTube Ad Blocker Brembo
-// @namespace    YouTube Ad Blocker 
+// @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Block YouTube ads discord.gg/m8r8Q37g4z
 // @author       Brembo
@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 
-    // Remove ads from the video player
+    
     var observer = new MutationObserver(function(mutations) {
         for (var i = 0; i < mutations.length; i++) {
             var mutation = mutations[i];
@@ -27,10 +27,10 @@
         }
     });
 
-    // Observe changes in the DOM
+
     observer.observe(document.body, { childList: true, subtree: true });
 
-    // Skip ads
+   
     function skipAds() {
         var skipButton = document.querySelector('.ytp-ad-skip-button');
         if (skipButton) {
@@ -38,10 +38,10 @@
         }
     }
 
-    // Check for ads every 500ms
+
     setInterval(skipAds, 500);
 
-    // Remove sidebar ads
+
     function removeSidebarAds() {
         var adContainers = document.querySelectorAll('#secondary #player-ads, #secondary ytd-promoted-sparkles-web-renderer');
         adContainers.forEach(function(ad) {
@@ -49,6 +49,6 @@
         });
     }
 
-    // Check for sidebar ads every 1000ms
+
     setInterval(removeSidebarAds, 1000);
 })();
