@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         YouTube Ad Blocker Brembo
-// @namespace    http://tampermonkey.net/
+// @namespace    YouTube Ad Blocker Brembo
 // @version      1.0
 // @description  Block YouTube ads discord.gg/m8r8Q37g4z
 // @author       Brembo
